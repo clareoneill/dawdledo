@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dawdle Do</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/production/styles.min.css">
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <img src="assets/images/logo.png" alt="Dawdle Do logo" class="logo">
+        <h1>Dawdle Do</h1>
+      </div>
+      <div class="col-sm-6" style="text-align: right">
+        <div class="username">
+          <i class="material-icons">account_circle</i>
+          Pin Pam
+        </div>
+        <a href="#" class="button">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <a href="/" class="button">Dashboard</a>
+  <h3 style="text-align: center;">Progress</h3>
+  <section class="main-section">
+    <h2>Read It</h2>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+        60%
+      </div>
+    </div>
+    <h4>You completed 6/10 Read It pins.</h4>
+    <h2>Shred It</h2>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100" style="width: 27%;">
+        27%
+      </div>
+    </div>
+    <h4>You completed 4/15 Shred It pins.</h4>
+    <h2>Tech</h2>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%;">
+        57%
+      </div>
+    </div>
+    <h4>You completed 4/7 Tech pins.</h4>
+  </section>
+
+  <section class="main-section">
+    <h3 style="text-align: center">Complete Pin Breakdown</h3>
+    <div class="row">
+      <div class="col-sm-4 col-sm-push-2">
+        <div class="pie" data-start="0" data-value="80"></div>
+        <div class="pie" data-start="80" data-value="160"></div>
+        <div class="pie big" data-start="160" data-value="200"></div>
+      </div>
+      <div class="col-sm-4 col-sm-push-2">
+        <h4><span class="read-it"></span>Read it: 56%</h4>
+        <h4><span class="shred-it"></span>Shred it: 22%</h4>
+        <h4><span class="tech"></span>Tech: 22%</h4>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="assets/scripts/production/scripts.min.js"></script>
+</body>
+</html>
