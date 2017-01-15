@@ -1,20 +1,154 @@
-/* -------------
-SETTINGS
-Global settings. Not in alphabetical order so files compile in order.
----------------*/
-//@import 'settings/breakpoints';
+$color-1: rgb(0, 188, 212);
+$color-2: rgb(63, 81, 181);
 
-/* -------------
-MIXINS
-Reusable chunks of code.
----------------*/
+.header {
+  padding: 30px 0;
+  background: $color-1;
+  margin-bottom: 30px;
+  color: white;
+}
 
-/* -------------
-GRID
-Grid structure.
----------------*/
+.logo {
+  width: 50px;
+  margin-right: 15px;
+}
 
-/* -------------
-COMPONENTS
-Global or resuable pieces that are dependant on settings.
----------------*/
+h1 {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.username {
+  margin-right: 15px;
+  display: inline-block;
+  font-size: 20px;
+  margin-top: 25px;
+
+  i {
+    vertical-align: middle;
+  }
+}
+
+.button {
+  background: $color-2;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  text-shadow: none;
+  border: none;
+
+  &:hover {
+    color: $color-1;
+    text-decoration: none;
+  }
+}
+
+.main-section {
+  margin-bottom: 60px;
+}
+
+.page-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.board {
+  cursor: pointer;
+  margin-bottom: 15px;
+
+  &.selected {
+    .board-title {
+      background: rgba(63, 81, 181,.6);
+    }
+  }
+}
+
+.board-title {
+  position: absolute;
+  width: calc(100% - 30px);
+  height: 100%;
+  background: rgba(0,0,0,.4);
+  color: white;
+  top: 0;
+  left: 15px;
+  border-radius: 5px;
+  padding: 15px;
+
+  h3 {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+  }
+}
+
+label {
+  font-weight: normal;
+}
+
+.interest,
+.frequency {
+  font-size: 28px;
+}
+
+input[type="checkbox"] {
+  display:none;
+
+  + label span {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border: 3px solid $color-1;
+    border-radius: 5px;
+  }
+
+  &:checked + label span {
+    background: $color-2;
+  }
+}
+
+input[type="radio"] {
+  display:none;
+
+  + label span {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    border: 3px solid $color-1;
+  }
+
+  &:checked + label span {
+    background: $color-2;
+  }
+}
+
+.weekly-options,
+.monthly-options {
+  position: fixed;
+  width: 50%;
+  max-width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 10px solid $color-2;
+  padding: 30px;
+  border-radius: 5px;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  .close {
+    font-size: 50px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}

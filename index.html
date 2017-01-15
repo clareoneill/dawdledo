@@ -3,12 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <title>Pin Pam</title>
-  <link rel="stylesheet" href="/node_modules/material-design-lite/material.min.css">
-  <script src="/node_modules/material-design-lite/material.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
   <link rel="stylesheet" href="assets/styles/production/styles.min.css">
 </head>
 <body>
-TEST!
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="assets/images/logo.png" alt="Dawdle Do logo" class="logo">
+          <h1>Dawdle Do</h1>
+        </div>
+        <div class="col-sm-6" style="text-align: right">
+          <div class="username">
+            <i class="material-icons">account_circle</i>
+            Pin Pam
+          </div>
+          <a href="#" class="button">Logout</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="container">
+    <section class="main-section">
+      <h3 style="text-align: center">Pick Your Preferences</h3>
+      <section>
+        <h2>Pinterest Boards</h2>
+        <div class="boards">
+          <div class="row">
+            <div class="board col-sm-3">
+              <img src="assets/images/boards/books.png" alt="" class="board-image img-responsive">
+              <div class="board-title">
+                <h3><i class="material-icons hidden">check_circle</i> Read it</h3>
+              </div>
+            </div>
+            <div class="board col-sm-3">
+              <img src="assets/images/boards/recipes.png" alt="" class="board-image img-responsive">
+              <div class="board-title">
+                <h3><i class="material-icons hidden">check_circle</i> Eat it</h3>
+              </div>
+            </div>
+            <div class="board col-sm-3">
+              <img src="assets/images/boards/workouts.png" alt="" class="board-image img-responsive">
+              <div class="board-title">
+                <h3><i class="material-icons hidden">check_circle</i> Shred It</h3>
+              </div>
+            </div>
+            <div class="board col-sm-3">
+              <img src="assets/images/boards/diy.png" alt="" class="board-image img-responsive">
+              <div class="board-title">
+                <h3><i class="material-icons hidden">check_circle</i> Make it</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row hidden more-boards">
+            <div class="board col-sm-3">
+              <img src="assets/images/boards/buy.png" alt="" class="board-image img-responsive">
+              <div class="board-title">
+                <h3><i class="material-icons hidden">check_circle</i> Buy it</h3>
+              </div>
+            </div>
+            <div class="board col-sm-3">
+              <img src="assets/images/boards/travel.png" alt="" class="board-image img-responsive">
+              <div class="board-title">
+                <h3><i class="material-icons hidden">check_circle</i> Explore it</h3>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <button class="button show-more-boards">+ More</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Interests</h2>
+        <div class="interests">
+          <div class="row">
+            <div class="col-sm-3">
+              <div class="interest">
+                <input type="checkbox" id="diy">
+                <label for="diy"><span></span> DIY</label>
+              </div>
+              <div class="interest">
+                <input type="checkbox" id="food">
+                <label for="food"><span></span> Food</label>
+              </div>
+              <div class="interest">
+                <input type="checkbox" id="beauty">
+                <label for="beauty"><span></span> Beauty</label>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="interest">
+                <input type="checkbox" id="travel">
+                <label for="travel"><span></span> Travel</label>
+              </div>
+              <div class="interest">
+                <input type="checkbox" id="home">
+                <label for="home"><span></span> Home</label>
+              </div>
+              <div class="interest">
+                <input type="checkbox" id="humor">
+                <label for="humor"><span></span> Humor</label>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="interest">
+                <input type="checkbox" id="art">
+                <label for="art"><span></span> Art</label>
+              </div>
+              <div class="interest">
+                <input type="checkbox" id="tech">
+                <label for="tech"><span></span> Tech</label>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="interest">
+                <input type="checkbox" id="health">
+                <label for="health"><span></span> Health</label>
+              </div>
+              <div class="interest">
+                <input type="checkbox" id="quotes">
+                <label for="quotes"><span></span> Quotes</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="main-section">
+      <h3 style="text-align: center;">Notifications</h3>
+      <div class="row">
+        <div class="col-sm-12">
+          <h2>Frequency</h2>
+        </div>
+        <div class="col-sm-4">
+          <div class="frequency">
+            <input type="radio" id="daily" name="frequency">
+            <label for="daily"><span></span> Daily</label>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="frequency weekly">
+            <input type="radio" id="weekly" name="frequency">
+            <label for="weekly"><span></span> Weekly</label>
+          </div>
+          <div class="hidden weekly-options">
+            <h3>Pick a day of the week:</h3>
+            <div class="close">&times;</div>
+            <div class="option">
+              <input type="radio" id="sunday" name="weekly-options">
+              <label for="sunday"><span></span> Sunday</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="monday" name="weekly-options">
+              <label for="monday"><span></span> Monday</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="tuesday" name="weekly-options">
+              <label for="tuesday"><span></span> Tuesday</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="wednesday" name="weekly-options">
+              <label for="wednesday"><span></span> Wednesday</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="thursday" name="weekly-options">
+              <label for="thursday"><span></span> Thursday</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="friday" name="weekly-options">
+              <label for="friday"><span></span> Friday</label>
+            </div>
+            <div class="option">
+              <input type="radio" id="saturday" name="weekly-options">
+              <label for="saturday"><span></span> Saturday</label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="frequency">
+            <input type="radio" id="monthly" name="frequency">
+            <label for="monthly"><span></span> Monthly</label>
+          </div>
+          <div class="hidden monthly-options">
+            <h3>Pick a day of the month:</h3>
+            <div class="close">&times;</div>
+            <select>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main-section" style="text-align: center;">
+      <button class="button">Save</button>
+    </section>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="assets/scripts/production/scripts.min.js"></script>
 </body>
 </html>
